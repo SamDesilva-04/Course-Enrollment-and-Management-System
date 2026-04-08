@@ -1,0 +1,19 @@
+<div class="student-container">
+  <h2>Registered Students</h2>
+  
+  <ul class="student-list">
+    <li *ngFor="let student of students" class="student-item">
+      
+      <div class="student-info">
+        <strong>{{ student.name }}</strong>
+        <br>
+        <span class="email">{{ student.email }}</span>
+      </div>
+
+      <span [ngClass]="{'status-active': student.isActive, 'status-inactive': !student.isActive}">
+        {{ student.isActive ? 'Active' : 'Inactive' }}
+      </span>
+
+    </li>
+  </ul>
+</div>

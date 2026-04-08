@@ -1,0 +1,11 @@
+<div style="border: 1px solid #ccc; padding: 20px; background: #f9f9f9;">
+  <h3>Enroll Student</h3>
+  <p>Click below to test the Event Binding.</p>
+  <button (click)="confirmEnrollment()" style="padding: 10px; background: green; color: white;">
+    Enroll Now
+  </button>
+  
+  <p *ngIf="message" style="color: green; font-weight: bold; margin-top: 10px;">
+    {{ message }}
+  </p>
+</div>
